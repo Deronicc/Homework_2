@@ -9,14 +9,14 @@
 Console.WriteLine("____________________");
 Console.WriteLine("Задача 1");
 Console.WriteLine();
-Console.WriteLine("Введите первое число");
+Console.WriteLine("Введите трехзначное число");
 int a = int.Parse(Console.ReadLine()!);
-int b = ((a / 10) % 10);
+int b = (a / 10) % 10;
 
 Console.WriteLine();
 Console.Write("Ответ: ");
 
-if ((a < 100)||(a > 1000))
+if ((a < 100) || (a > 1000))
 {
     Console.Write($"число {a} не трехзначное. нужно ввести трехзначное число");
 }
@@ -33,6 +33,42 @@ else
 78 -> третьей цифры нет
 
 32679 -> 6 */
+
+Console.WriteLine("____________________");
+Console.WriteLine("Задача 2");
+Console.WriteLine();
+Console.WriteLine("Введите число (Максимальное число 100000)");
+int a1 = int.Parse(Console.ReadLine()!);
+// int a1 = new Random().Next (10,100000); /* Рандомазер от 10 до 100000 */
+int b1 = (a1 / 1000) % 10;
+int b2 = (a1 / 100) % 10;
+int b3 = (a1 / 10) % 10;
+int b4 = (a1 / 1) % 10;
+
+
+Console.WriteLine();
+Console.Write("Ответ: ");
+
+if (a1 < 100)
+{
+    Console.Write($"{a1} -> третьей цифры нет");
+}
+else if (a1 > 100000)
+{
+    Console.Write($"число {a1} больше 100000");
+}
+else if ((a1 <= 100000) && (a1 >= 10000))
+{
+    Console.Write($"число {a1} -> {b2}");
+}
+else if ((a1 <= 10000) && (a1 >= 1000))
+{
+    Console.Write($"число {a1} -> {b3}");
+}
+else if ((a1 <= 1000) && (a1 >= 100))
+{
+    Console.Write($"число {a1} -> {b4}");
+}
 
 /* Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели,
  и проверяет, является ли этот день выходным. Обязательно сделать проверку на ввод чисел меньше 1 и больше 7
