@@ -39,7 +39,7 @@ Console.WriteLine("Задача 2");
 Console.WriteLine();
 Console.WriteLine("Введите число (Максимальное число 100000)");
 int a1 = int.Parse(Console.ReadLine()!);
-// int a1 = new Random().Next (10,100000); /* Рандомазер от 10 до 100000 */
+// int a1 = new Random().Next (10,100000); // Рандомазер от 10 до 100000
 int b1 = (a1 / 1000) % 10;
 int b2 = (a1 / 100) % 10;
 int b3 = (a1 / 10) % 10;
@@ -76,3 +76,25 @@ else if ((a1 <= 1000) && (a1 >= 100))
 6 -> да
 7 -> да
 1 -> нет */
+
+Console.WriteLine("____________________");
+Console.WriteLine("Задача 3");
+Console.WriteLine();
+Console.WriteLine("Введите день(укажите цифру) недели");
+int a2 = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine();
+Console.Write("Ответ: ");
+
+if ((a2 == 6) || (a2 == 7))
+{
+    Console.Write($"{a2} -> да");
+}
+else if ((a2 <= 5) && (a2 >= 1))
+{
+    Console.Write($"{a2} -> нет");
+}
+else
+{
+    Console.Write("В неделе 7 дней (укажите корректную цифру)");
+}
